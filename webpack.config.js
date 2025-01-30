@@ -45,6 +45,8 @@ const config = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "src/public/manifest.json", to: "manifest.json" },
+        { from: "src/public/android-chrome-192x192.png", to: "android-chrome-192x192.png" },
+        { from: "src/public/android-chrome-512x512.png", to: "android-chrome-512x512.png" },
       ],
     }),
   ],
