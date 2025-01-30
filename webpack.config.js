@@ -42,6 +42,7 @@ const config = {
       'process.env.API_ORIGIN': JSON.stringify(process.env.API_ORIGIN ?? '')
     }),
 
+    // copy manifest
     new CopyWebpackPlugin({
       patterns: [
         { from: "src/public/manifest.json", to: "manifest.json" },
