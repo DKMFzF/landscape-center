@@ -1,6 +1,6 @@
 import { IView } from "../../base/View";
 
-export interface IBasket<T> {
+export interface IBasketData<T> {
   title: string;
   total: number;
   products: T[];
