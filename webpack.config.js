@@ -31,7 +31,7 @@ const config = {
   plugins: [
     // html webpack
     new HtmlWebpackPlugin({
-      template: "src/pages/index.html"
+      template: "src/pages/index.pug"
     }),
 
     new MiniCssExtractPlugin(),
@@ -79,6 +79,17 @@ const config = {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
       },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'pug-loader',
+            options: {
+              pretty: true // Опция для форматирования HTML (опционально)
+            }
+          }
+        ]
+      }
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
