@@ -25,13 +25,13 @@ const config = {
   devServer: {
     open: true,
     host: "localhost",
-    watchFiles: ["src/pages/*.pug"],
+    watchFiles: ["src/pages/*.html"],
     hot: true
   },
   plugins: [
     // html webpack
     new HtmlWebpackPlugin({
-      template: "src/pages/index.pug"
+      template: "src/pages/index.html"
     }),
 
     new MiniCssExtractPlugin(),
@@ -58,17 +58,6 @@ const config = {
         test: /\.(ts|tsx)$/i,
         use: ["babel-loader", "ts-loader"],
         exclude: ["/node_modules/"],
-      },
-      {
-        test: /\.pug$/,
-        use: [
-          {
-            loader: 'pug-loader',
-            options: {
-              pretty: true // Опция для форматирования HTML (опционально)
-            }
-          }
-        ]
       },
       {
         test: /\.s[ac]ss$/i,
