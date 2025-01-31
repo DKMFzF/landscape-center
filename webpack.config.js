@@ -25,10 +25,11 @@ const config = {
   devServer: {
     open: true,
     host: "localhost",
-    watchFiles: ["src/pages/*.html"],
+    watchFiles: ["src/pages/*.njk"],
     hot: true
   },
   plugins: [
+    // html webpack
     new HtmlWebpackPlugin({
       template: "src/pages/index.html"
     }),
