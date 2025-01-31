@@ -1,4 +1,4 @@
-import { IView } from "../../base/View";
+import { IView } from '@/types/components/base/View';
 
 export interface IModalData<C> {
   content: C;

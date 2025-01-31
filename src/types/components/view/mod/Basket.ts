@@ -1,9 +1,9 @@
-import { IView } from "../../base/View";
+import { IView } from '@/types/components/base/View';
 
-export interface IBasketData<T> {
+export interface IBasketData {
   title: string;
   total: number;
-  products: T[];
+  products: [];
 }
 
 export interface IBasketSettings<T> {

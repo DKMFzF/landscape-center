@@ -1,4 +1,4 @@
-import { IClickable } from "../../base/View";
+import { IClickable } from '@/types/components/base/View';
 
 export interface IButtonData {
   label: string;
