@@ -349,3 +349,9 @@ template {
 [hidden] {
 	display: none;
 }
+
+ul {
+	list-style: none;
+	margin-block: 0;
+	padding-inline: 0;
+}

@@ -1,5 +1,19 @@
-// @use '../scss/variables' as *;
+@use '../scss/variables' as *;
+@use '../scss/mixins/flex-display';
+@use "sass:map";
 
-// .header {
-   
-// }
+.header {
+  @include flex-display.flex(row);
+
+  // &__logo {
+  //   margin-inline-start: 20px;
+  // }
+
+  &__navigation-list {
+    @include flex-display.flex(row);
+  }
+
+  &__action-container {
+    @include flex-display.flex(row);
+  }
+}

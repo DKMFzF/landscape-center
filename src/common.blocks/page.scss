@@ -5,9 +5,9 @@ html,
 body.page {
   block-size: 100%;
   font-family: map.get($map: $baseFontSettings, $key: baseFont);
-  // font-size: map.get($baseFontSettings, baseFontSize);
-  // color: map.get($baseFontSettings, baseFontColor);
-  // background: map.get($mainPageSettings, mainBackground);
+  font-size: map.get($baseFontSettings, baseFontSize);
+  color: map.get($baseFontSettings, baseFontColor);
+  background: map.get($mainPageSettings, mainBackground);
 
   &__wrapper {
     inline-size: 100%;
