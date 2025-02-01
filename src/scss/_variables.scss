@@ -1,5 +1,7 @@
+$baseFont: 'Comfortaa', sans-serif;
+
 $baseFontSettings: (
-  baseFont: ('Comfortaa', sans-serif),
+  baseFont: $baseFont,
   baseFontSize: 20px,
   baseFontColor: #2f2f2f,
 );
@@ -9,5 +11,7 @@ $mainPageSettings: (
 );
 
 $header: (
-  
+  fontSize: 0.8rem,
+  orientationTop: 90px,
+  oritntationLeft: 50%,
 );

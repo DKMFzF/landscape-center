@@ -1,19 +1,62 @@
 @use '../scss/variables' as *;
 @use '../scss/mixins/flex-display';
-@use "sass:map";
+@use '../scss/mixins/logic-features';
+@use '../scss/mixins/position';
+@use 'sass:map';
 
 .header {
-  @include flex-display.flex(row);
+	@include flex-display.flex(row, space-between, center);
+	@include position.positionCenter(
+		absolute,
+		map.get($header, orientationTop),
+		map.get($header, oritntationLeft)
+	);
+	font-size: map.get($header, fontSize);
 
-  // &__logo {
-  //   margin-inline-start: 20px;
-  // }
+	&__logo {
+		@include logic-features.logic-size(80px, 188px);
+	}
 
-  &__navigation-list {
-    @include flex-display.flex(row);
+	&__navigation-list {
+		@include flex-display.flex(row, center, center, 60px);
+    @include logic-features.logic-size(auto, 197px);
+	}
+
+  &__content {
+    display: inline-flex;
+    margin-inline-start: 146px;
+    gap: 338px;
   }
 
-  &__action-container {
-    @include flex-display.flex(row);
-  }
+	&__action-container {
+		@include flex-display.flex(row, center, center, 40px);
+	}
+
+	&__basket-container {
+		@include flex-display.flex(row, center, center);
+	}
+
+	&__basket-icon {
+		@include logic-features.logic-size(24px, 20px);
+	}
+
+	&__account-container {
+		@include flex-display.flex(row, center, center);
+	}
+
+	&__account-icon {
+		@include logic-features.logic-size(24px, 24px);
+	}
+
+	&__search-icon {
+		@include logic-features.logic-size(18px, 18px);
+	}
+
+	&__search-input {
+		@include flex-display.flex(row, center, center);
+	}
+
+	&__action-text {
+		@include logic-features.logic-margin($inline-start: 17px);
+	}
 }

@@ -1,0 +1,6 @@
+@mixin positionCenter($position: auto, $top: 0, $left: 0) {
+  position: $position;
+  top: $top; 
+  left: $left;
+  transform: translate(-50%, -50%);
+}
