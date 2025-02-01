@@ -2,5 +2,8 @@
 @use '../vendor/mak';
 @use '../vendor/comfortaa';
 
+@use '../common.blocks/page.scss';
+@use '../common.blocks/header.scss';
+
 @use 'variables' as *;
 @use 'mixins';

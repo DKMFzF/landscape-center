@@ -1,0 +1,20 @@
+@use '../scss/variables' as *;
+@use "sass:map";
+
+html,
+body.page {
+  block-size: 100%;
+  font-family: map.get($map: $baseFontSettings, $key: baseFont);
+  // font-size: map.get($baseFontSettings, baseFontSize);
+  // color: map.get($baseFontSettings, baseFontColor);
+  // background: map.get($mainPageSettings, mainBackground);
+
+  &__wrapper {
+    inline-size: 100%;
+  
+    // класс который блокирует страницу при открытии модального окна
+    &_locked {
+      position: fixed;
+    }
+  }
+}
