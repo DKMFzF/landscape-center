@@ -1,5 +1,6 @@
 @use '../vendor/normalize.css';
-@use '../vendor/mak/index.css';
+@use '../vendor/mak';
+@use '../vendor/comfortaa';
 
 @use 'variables' as *;
 @use 'mixins';
