@@ -11,22 +11,15 @@
 		map.get($header, orientationTop),
 		map.get($header, oritntationLeft)
 	);
-	font-size: map.get($header, fontSize);
-
-	&__logo {
-		@include logic-features.logic-size(80px, 188px);
-	}
 
 	&__navigation-list {
 		@include flex-display.flex(row, center, center, 60px);
-    @include logic-features.logic-size(auto, 197px);
 	}
 
-  &__content {
-    display: inline-flex;
-    margin-inline-start: 146px;
-    gap: 338px;
-  }
+	&__content {
+    @include flex-display.flex($direction: row, $gap: 338px);
+		@include logic-features.logic-margin($inline-start: 146px);
+	}
 
 	&__action-container {
 		@include flex-display.flex(row, center, center, 40px);
@@ -58,5 +51,48 @@
 
 	&__action-text {
 		@include logic-features.logic-margin($inline-start: 17px);
+	}
+
+	@media screen and (width <= map.get($breakingPoints, wideScreen)),
+		(width >= map.get($breakingPoints, wideScreen)) {
+		& {
+			font-size: map.get($header, veryBigFontSize);
+
+      &__logo {
+        @include logic-features.logic-size(160px, 268px);
+      }
+
+      &__navigation-list {  
+        @include logic-features.logic-size($inline: 332px);
+      }
+		}
+	}
+
+  @media screen and (width <= map.get($breakingPoints, standartScreen)) {
+    & {
+      font-size: map.get($header, bigFontSize);
+
+      &__logo {
+        @include logic-features.logic-size(115px, 218px);
+      }
+
+      &__navigation-list {  
+        @include logic-features.logic-size($inline: 264px);
+      }
+    }
+  }
+
+	@media screen and (width <= map.get($breakingPoints, laptopScreen)) {
+		& {
+			font-size: map.get($header, standartFontSize);
+
+      &__logo {
+        @include logic-features.logic-size(80px, 188px);
+      }
+
+      &__navigation-list {  
+        @include logic-features.logic-size($inline: 196px);
+      }
+		}
 	}
 }
