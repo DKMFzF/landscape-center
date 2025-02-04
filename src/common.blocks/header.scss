@@ -5,28 +5,35 @@
 @use 'sass:map';
 
 .header {
-	@include flex-display.flex(row, space-between, center);
+	@include flex-display.flex(row, center, center);
+	@include logic-features.logic-size($inline: 100%);
 	@include position.positionCenter(
 		absolute,
 		map.get($header, orientationTop),
 		map.get($header, oritntationLeft)
 	);
 
-	&__navigation-list {
-		@include flex-display.flex(row, center, center, 60px);
+	&__container {
+		@include flex-display.flex(row);
+		@include logic-features.logic-margin($inline-start: auto, $inline-end: auto);
+	}
+
+	&__logo {
+		@include logic-features.logic-size(80px, 188px);
 	}
 
 	&__content {
-    @include flex-display.flex($direction: row, $gap: 338px);
-		@include logic-features.logic-margin($inline-start: 146px);
+    @include flex-display.flex($direction: row, $justify: space-between, $align: center);
+		@include logic-features.logic-margin($inline-start: auto);
+	}
+
+	&__navigation-list {
+		@include flex-display.flex(row, $gap: 60px);
 	}
 
 	&__action-container {
 		@include flex-display.flex(row, center, center, 40px);
-	}
-
-	&__basket-container {
-		@include flex-display.flex(row, center, center);
+		@include logic-features.logic-margin($inline-start: 280px);
 	}
 
 	&__basket-icon {
@@ -34,6 +41,10 @@
 	}
 
 	&__account-container {
+		@include flex-display.flex(row, center, center);
+	}
+
+	&__basket-container {
 		@include flex-display.flex(row, center, center);
 	}
 
@@ -53,46 +64,4 @@
 		@include logic-features.logic-margin($inline-start: 17px);
 	}
 
-	@media screen and (width <= map.get($breakingPoints, wideScreen)),
-		(width >= map.get($breakingPoints, wideScreen)) {
-		& {
-			font-size: map.get($header, veryBigFontSize);
-
-      &__logo {
-        @include logic-features.logic-size(160px, 268px);
-      }
-
-      &__navigation-list {  
-        @include logic-features.logic-size($inline: 332px);
-      }
-		}
-	}
-
-  @media screen and (width <= map.get($breakingPoints, standartScreen)) {
-    & {
-      font-size: map.get($header, bigFontSize);
-
-      &__logo {
-        @include logic-features.logic-size(115px, 218px);
-      }
-
-      &__navigation-list {  
-        @include logic-features.logic-size($inline: 264px);
-      }
-    }
-  }
-
-	@media screen and (width <= map.get($breakingPoints, laptopScreen)) {
-		& {
-			font-size: map.get($header, standartFontSize);
-
-      &__logo {
-        @include logic-features.logic-size(80px, 188px);
-      }
-
-      &__navigation-list {  
-        @include logic-features.logic-size($inline: 196px);
-      }
-		}
-	}
 }

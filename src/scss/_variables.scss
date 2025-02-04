@@ -9,6 +9,11 @@ $breakingPoints: (
   smallSmartPhoneScreen: 320px,
 );
 
+$baseContainerSize: (
+  base: 1170px,
+  laptopXXL: 1070px,
+);
+
 $baseFont: 'Comfortaa', sans-serif;
 
 $baseFontSettings: (
@@ -24,10 +29,14 @@ $mainPageSettings: (
 $header: (
   headerBreakingPoints: (
     smallerLaptop: 1340px,
+    smallerLaptop1200: 1200px,
   ),
-  veryBigFontSize: 1.6rem,
-  bigFontSize: 1.2rem,
-  standartFontSize: 0.8rem,
+  headerFonts: (
+    veryBigFontSize: 1.6rem,
+    bigFontSize: 1.2rem,
+    standartFontSize: 0.8rem,
+    laptopFontSize: 0.6rem,
+  ),
   orientationTop: 90px,
   oritntationLeft: 50%,
 );
