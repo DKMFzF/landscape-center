@@ -1,0 +1,5 @@
+@use '../scss/mixins/interactive';
+
+.link {
+  @include interactive.link($color: currentColor, $hover: true);
+}

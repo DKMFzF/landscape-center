@@ -1,0 +1,18 @@
+@mixin link($color: null, $hover: null) {
+  padding: 0;
+  color: $color;
+  text-decoration: none;
+  background: transparent;
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+
+  @if ($hover) {
+    & {
+      transition: opacity 0.3s ease;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -2,6 +2,8 @@
 @use '../vendor/mak';
 @use '../vendor/comfortaa';
 
+@use '../common.elements/link.scss';
+
 @use '../common.blocks/container.scss';
 @use '../common.blocks/page.scss';
 @use '../common.blocks/header.scss';
